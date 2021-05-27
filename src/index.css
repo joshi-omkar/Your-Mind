@@ -8,32 +8,38 @@ body {
 }
 * {
   font-family: "Verdana", cursive, sans-serif;
-  color: #ffffff;
+  color: #252d4a;
+  overflow-x: hidden;
+  text-decoration: none;
 }
 
 body {
-  background-color: #7cc6fe;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: #e7e7e7;
+
   min-height: 100vh;
 }
 
-.app {
-  background-color: #252d4a;
-  width: 450px;
+.container {
+  background-color: #e7e7e7;
+  width: 60%;
   min-height: 200px;
   height: min-content;
-  border-radius: 15px;
+  /* border-radius: 15px; */
   padding: 20px;
-  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+  /* box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75); */
+  /* display: flex; */
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(32%);
 }
 
 .score-section {
   display: flex;
   font-size: 24px;
+  align-items: center;
+  padding: 15px;
+  justify-content: center;
   align-items: center;
 }
 
@@ -52,7 +58,9 @@ body {
 }
 
 .question-text {
-  margin-bottom: 12px;
+  margin-bottom: 15px;
+  padding: 20px 5px 5px 5px;
+ 
 }
 
 .timer-text {
@@ -69,26 +77,51 @@ body {
 .answer-section {
   width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-around;
+  /* flex-wrap: wrap; */
+  /* align-items: center; */
+  padding: 5px;
+  margin: 10px;
 }
 
-button {
+.option-button {
   width: 100%;
+  flex: max-content;
   font-size: 16px;
   color: #ffffff;
   background-color: #252d4a;
   border-radius: 15px;
   display: flex;
-  padding: 5px;
-  justify-content: flex-start;
+  position: relative;
+  padding: 20px;
+  justify-content: center;
   align-items: center;
-  border: 5px solid #234668;
+  border: 2px solid #234668;
   cursor: pointer;
+  margin-right: 50px;
 }
 
-.correct {
+button:focus {
   background-color: #2f922f;
+}
+
+.result-button{
+  width: 60%;
+  flex: max-content;
+  font-size: 15px;
+  color: #ffffff;
+  background-color: #252d4a;
+  border-radius: 15px;
+  display: flex;
+  position: relative;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #234668;
+  cursor: pointer;
+  margin-right: 50px;
+  transform: translateX(35%);
 }
 
 .incorrect {
@@ -99,10 +132,16 @@ button:hover {
   background-color: #555e7d;
 }
 
-button:focus {
-  outline: none;
-}
+
 
 button svg {
   margin-right: 5px;
+}
+
+img{
+  width: 100%;
+  max-height: 20%;
+  object-fit: cover;
+  object-position: 30% 30%;
+  height: 500px;
 }
