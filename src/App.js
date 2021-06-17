@@ -5,16 +5,24 @@ import Score from "./components/score";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Result from "./components/result";
 import Image1 from './images/image2.jpg'
+import Footer from './components/Footer'
+
 
 export default function App() {
 
-  const [message, setMessage] = useState("");
-  const [mainMessage,setMainMessage] = useState('');
-  const [score, setScore] = useState(0);
+  // this is our main file from here we get everything to show on screen
 
+  const [message, setMessage] = useState(""); //this will messages to show on screen for scores
+  const [mainMessage,setMainMessage] = useState('');//this is our main message to show to user
+  const [score, setScore] = useState(0);//this returns score 
+
+
+//the handleAnswerOptionClick function handle the option clicks and messages to show to users
+ 
   const handleAnswerOptionClick = (isCorrect) => {
-    setScore(score + isCorrect);
+    setScore(score + isCorrect); //this will set our score we will use this futher to show score
 
+    //this is our logic to show in message based on score
     if (score <= questions.length * 1) {
       setMainMessage('Very Low Risk!');
       setMessage("Your results indicate that you have none , or very few symptoms of depression. IF you notice that your symptoms aren't improving, you may want to bring them up with a mental health professional or someone who is supporting you.");
@@ -30,14 +38,16 @@ export default function App() {
     }
   };
 
+  //this is Home function and we are getting questions and answers from here 
   const Home = () => (
     <div>
       {questions.map((question) => (
         <div>
+          {/* this is qustion section */}
           <div className="question-section">
             <div className="question-text">{question.questionText}</div>
           </div>
-
+          {/* this is answer section */}
           <div className="answer-section">
             {question.answerOptions.map((answerOption) => (
               <button
@@ -69,6 +79,7 @@ export default function App() {
         <Link to="/score">
             <Score score={score} />
           </Link>
+          <Footer/>
       </div>
     </Router>
   );

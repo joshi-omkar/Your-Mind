@@ -109,13 +109,13 @@ button:focus {
 .result-button{
   width: 60%;
   flex: max-content;
-  font-size: 15px;
+  font-size: 25px;
   color: #ffffff;
   background-color: #252d4a;
   border-radius: 15px;
   display: flex;
   position: relative;
-  padding: 20px;
+  padding: 15px;
   justify-content: center;
   align-items: center;
   border: 2px solid #234668;
@@ -124,12 +124,15 @@ button:focus {
   transform: translateX(35%);
 }
 
-.incorrect {
-  background-color: #ff3333;
-}
+
 
 button:hover {
-  background-color: #555e7d;
+  background-color: #6c77a1;
+  color: #fff;
+}
+
+.option-button::after{
+  background-color: #4dff6b;
 }
 
 
@@ -144,4 +147,65 @@ img{
   object-fit: cover;
   object-position: 30% 30%;
   height: 500px;
+}
+
+.footer{
+  display: flex;
+  height: 25px;
+}
+
+@media only screen  and (max-width : 640px){
+
+  .answer-section {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 5px ;
+    margin: 5px;
+  }
+
+  .container {
+    background-color: #e7e7e7;
+    width: 60%;
+    min-height: 200px;
+    height: min-content;
+    /* border-radius: 15px; */
+    padding: 20px;
+    /* box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75); */
+    /* display: flex; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(22%);
+  }
+  
+  img{
+    width: 100%;
+    max-height: 10%;
+    object-fit: cover;
+    object-position: 70% 70%;
+    height: 300px;
+  }
+
+  .option-button {
+    width: 100%;
+    flex: max-content;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #252d4a;
+    border-radius: 15px;
+    display: flex;
+    position: relative;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #234668;
+    cursor: pointer;
+    margin-right: 50px;
+    margin-top: 5px;
+  }
+  
 }
