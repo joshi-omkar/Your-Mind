@@ -1,3 +1,5 @@
+//these are our questions
+//every question has 4 options and score 1, 2, 3, 4
 const questions = [
     {
       questionText: "1. Little interest or pleasure in doing things or having difficulty to express your emotions",
